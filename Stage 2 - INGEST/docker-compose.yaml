@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+    postgres:
+        image: postgres:16
+        container_name: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: gfgvnadmin
+            POSTGRES_PASSWORD: gfgvnadminpwd
+            POSTGRES_DB: gfg
+        volumes:
+            - ./mnt/pgdata:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+
+    cloudbeaver:
+        image: dbeaver/cloudbeaver:latest
+        container_name: cloudbeaver
+        restart: always
+        ports:
+            - "8978:8978"
+        environment:
+                CB_SERVER_NAME: "CloudBeaver"
+                CB_ADMIN_NAME: "cbadmin"
+                CB_ADMIN_PASSWORD: "xEyjGZx80jzY9x3gmQDI"
+        depends_on:
+            - postgres
