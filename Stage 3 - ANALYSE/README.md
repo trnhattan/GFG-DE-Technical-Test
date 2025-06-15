@@ -1,6 +1,6 @@
 # Stage 3 : ANALYSE
 
-1. **What percentage of customers who have purchased female items have paid by credit card?**
+## 1. **What percentage of customers who have purchased female items have paid by credit card?**
 
 | **Total Revenue** |
 | --- |
@@ -14,7 +14,7 @@ WHERE cs.cc_payments > 0;
 
 ---
 
-1. **What percentage of customers who have purchased female items have paid by credit card?**
+## 2. **What percentage of customers who have purchased female items have paid by credit card?**
 
 | **Percentage of female items with CC payment** |
 | --- |
@@ -32,7 +32,7 @@ FROM customer_snapshot cs;
 
 ---
 
-1. **What was the average revenue for customers who used either iOS, Android or Desktop?**
+## 3. **What was the average revenue for customers who used either iOS, Android or Desktop?**
 - Average revenue for any of 3 devices
 
 | **Average revenue for any of 3 devices** |
@@ -75,7 +75,7 @@ GROUP BY device_type;
 
 ---
 
-1. **We want to run an email campaign promoting a new mens luxury brand. Can you provide a list of customers we should send to?**
+## 4. **We want to run an email campaign promoting a new mens luxury brand. Can you provide a list of customers we should send to?**
 
 I have considered these criteria under customer perspective and the data we have:
 
