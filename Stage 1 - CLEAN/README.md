@@ -1,8 +1,12 @@
 # Stage 1 : CLEAN
 
-`[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](`[https://colab.research.google.com/drive/1C_X4Z2LNiSI94P19aMCJdMEgb6cmSuJ8?usp=sharing](https://colab.research.google.com/drive/1C_X4Z2LNiSI94P19aMCJdMEgb6cmSuJ8?usp=sharing)`]`
+<a target="_blank" href="https://colab.research.google.com/github/trnhattan/GFG-DE-Technical-Test">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
-1. `NULL` stats
+---
+
+## 1. `NULL` stats
 
 ```bash
 +------------------------+--------------+----------------+
@@ -25,7 +29,7 @@
 
 → There is only a column containing `null` values; values are the amount of discount price ⇒ the most feasible value to replace the `null` value is `0.0` 
 
-1. Duplicates
+## 2. Duplicates
 - This is a customer snapshot data, number of purchased items, used devices, …, so each record should represent for a customer → unique `customer_id`
 - `groupBy(customer_id)` → more than 2 hundreds duplicated records
 
@@ -47,7 +51,7 @@
 only showing top 10 rows
 ```
 
-1. Wrong counting unit for `days_since_last_order` 
+3. Wrong counting unit for `days_since_last_order` 
 - Consider this box plot, the distribution of `days_since_last_order` shows an unusually large spread, with maximum values exceeding 50,000 days → `days_since_last_order` values might have been incorrectly recorded or computed in hours rather than days.
 
 ![image.png](images/image.png)
@@ -56,9 +60,10 @@ only showing top 10 rows
 
 ![image.png](images/image%201.png)
 
-1. Validate `boolean` field, `is_newsletter_subscriber` 
+## 4. Validate `boolean` field, `is_newsletter_subscriber` 
 - Instead of storing value of Y/N, we should convert to `boolean` for unified format.
-1. **Final script:**
+  
+## 5. **Final script:**
 
 ```python
 rawDf
